@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         home: HomeScreen(),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
+      brightness: brightness.dark(),
     );
   }
 }
@@ -24,7 +24,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   TextEditingController _nameController = TextEditingController();
-  String result = "0";
+  String result = "male";
   predictGender(String name) async
   {
      var url = "https://api.genderize.io/?name=$name";
